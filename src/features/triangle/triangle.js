@@ -12,6 +12,7 @@ const triangleStyles = {
 /**
  * The Square
  */
+
 const Triangle = (props) => {
 
   const fill = useSelector((state) => state.triangle.fill);
@@ -25,6 +26,7 @@ const Triangle = (props) => {
     /**
    * Utilities
    */
+
   function buildD(vertices) {
     return [
       'M', ...vertices[0],

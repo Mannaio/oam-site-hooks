@@ -11,6 +11,7 @@ const circleStyles = {
 /**
  * The Square
  */
+
 const Circle = (props) => {
 
   const fill = useSelector((state) => state.circle.fill);
@@ -23,21 +24,16 @@ const Circle = (props) => {
   useEffect(() => {
 
     tl.fromTo(boxRef.current,t1, {
-      // transformOrigin: '50% 50%',
       transform: `translate3d(${-2.5*r}px, ${-y-2*r}px, 0px)`,
       },{
         transform: `translate3d(${-2.5*r}px, 0px, 0px)`,
-        // ease: Elastic.easeOut.config(1, 0.75)
       })
       .to(boxRef.current, t2, {
         transform: `translate3d(0px, 0px, 0px)`,
         ease: Elastic.easeInOut
       }
     )
-  
-
     .set(boxRef.current, {opacity: 0.2})
-  
   },[]);
 
   return (

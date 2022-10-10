@@ -4,20 +4,18 @@ import Circle from "../circle/circle";
 import Triangle from "../triangle/triangle";
 import BG from "../bg/Bg";
 import { useSelector } from "react-redux";
+
 /**
  * SVG Canvas
  * This component generates the base SVG
  * and sets up all the sub-components
  */
+
 const Canvas = ({ core, square, triangle, circle }) => {
-  // const { width, height, bgFill } = core;
   const width = useSelector((state) => state.core.width);
   const height = useSelector((state) => state.core.height);
   const bgFill = useSelector((state) => state.core.bgfill);
   const viewBox = [0, 0, width, height].join(" ");
-
-  console.log('width', width);
-  console.log('height', height);
 
   const content =
     width !== 0 && height !== 0 ? (
