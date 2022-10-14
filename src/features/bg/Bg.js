@@ -10,7 +10,7 @@ import { gsap, Elastic } from "gsap";
 const BG = (props) => {
   const { w, h } = props;
   const boxRef = useRef();
-  const fill = useSelector((state) => state.bkground.bgfill);
+  const fill = useSelector((state) => state.bkground.fill);
 
   const tl = gsap.timeline();
 

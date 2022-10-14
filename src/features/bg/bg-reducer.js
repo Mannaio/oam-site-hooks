@@ -7,7 +7,8 @@ import * as R from "ramda";
 const initialState = {
   w: 0,
   h: 0,
-  fill: PALETTE.JAZZY.circle,
+  palette: 'JAZZY',
+  fill: PALETTE.JAZZY.bg,
   visible: true
 };
 
